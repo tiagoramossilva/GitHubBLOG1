@@ -1,0 +1,30 @@
+.issue-page {
+    padding: 20px;
+  }
+  
+  .back-button {
+    margin-bottom: 10px;
+  }
+  
+  .issue-info {
+    margin-bottom: 20px;
+  }
+  
+  .github-link {
+    color: #0366d6;
+    text-decoration: none;
+  }
+  
+  .github-link:hover {
+    text-decoration: underline;
+  }
+  
+  .issue-summary {
+    margin-bottom: 20px;
+  }
+  
+  .issue-body {
+    border-top: 1px solid #ddd;
+    padding-top: 10px;
+  }
+  
