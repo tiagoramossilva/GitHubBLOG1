@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
-import Profile from '../components/Profile'; // Certifique-se de que o caminho está correto
+import Profile from '../components/Profile'; 
 import './HomePage.css'; 
 
 const HomePage = () => {
@@ -23,11 +23,11 @@ const HomePage = () => {
 
   return (
     <div className="home-page">
-      <Profile /> {/* Adiciona o componente Profile aqui */}
+      <Profile /> 
       <h1>GitHub Blog</h1>
       <input
         type="text"
-        placeholder="Buscar issues..."
+        placeholder="Buscar issues"
         value={search}
         onChange={(e) => setSearch(e.target.value)}
         className="search-input"
@@ -36,7 +36,7 @@ const HomePage = () => {
         {issues.map((issue) => (
           <li key={issue.id} className="issue-item">
             <Link to={`/issue/${issue.number}`}>{issue.title}</Link>
-            <p>{issue.body.length > 100 ? `${issue.body.substring(0, 100)}...` : issue.body}</p> 
+            <p>{issue.body.length > 100 ? `${issue.body.substring(0, 150)}...` : issue.body}</p> 
           </li>
         ))}
       </ul>

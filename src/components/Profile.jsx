@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import './Profile.css'; // Adicione o CSS se desejar estilizar o componente
+import './Profile.css'; 
 
 const Profile = () => {
   const [profile, setProfile] = useState(null);

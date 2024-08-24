@@ -1,5 +1,7 @@
 .profile {
     display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
     align-items: center;
     border: 1px solid #ddd;
     padding: 20px;
