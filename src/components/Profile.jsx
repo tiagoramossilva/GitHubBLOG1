@@ -4,12 +4,11 @@ import './Profile.css';
 
 const Profile = () => {
   const [profile, setProfile] = useState(null);
-  const username = 'tiagoramossilva'; 
 
   useEffect(() => {
     const fetchProfile = async () => {
       try {
-        const response = await axios.get(`https://api.github.com/users/${username}`);
+        const response = await axios.get(`https://api.github.com/users/tiagoramossilva`);
         setProfile(response.data);
       } catch (error) {
         console.error('Erro ao buscar o perfil', error);
@@ -17,7 +16,7 @@ const Profile = () => {
     };
 
     fetchProfile();
-  }, [username]);
+  },);
 
   if (!profile) return <div>Carregando perfil...</div>;
 
