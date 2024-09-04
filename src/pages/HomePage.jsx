@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
-import Profile from '../components/Profile'; 
-import './HomePage.css'; 
+import Profile from '../components/Profile';
+import IssueList from '../components/IssueList'; 
+import './HomePage.css';
 
 const HomePage = () => {
   const [issues, setIssues] = useState([]);
@@ -23,7 +24,7 @@ const HomePage = () => {
 
   return (
     <div className="home-page">
-      <Profile /> 
+      <Profile />
       <h1>GitHub Blog</h1>
       <input
         type="text"
@@ -32,14 +33,7 @@ const HomePage = () => {
         onChange={(e) => setSearch(e.target.value)}
         className="search-input"
       />
-      <ul className="issue-list">
-        {issues.map((issue) => (
-          <li key={issue.id} className="issue-item">
-            <Link to={`/issue/${issue.number}`}>{issue.title}</Link>
-            <p>{issue.body.length > 100 ? `${issue.body.substring(0, 150)}...` : issue.body}</p> 
-          </li>
-        ))}
-      </ul>
+      <IssueList issues={issues} /> 
     </div>
   );
 };
